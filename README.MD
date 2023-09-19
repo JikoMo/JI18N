@@ -1,5 +1,4 @@
 # JI18N: I18N for Jiko
-[TOC]
 
 # First step: Download
 
