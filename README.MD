@@ -1,4 +1,5 @@
 # JI18N: I18N for Jiko
+[TOC]
 
 # First step: Download
 
@@ -33,25 +34,39 @@ JI18N I18N(string LANG_DIRECTORY, string LANG);
 
 ```C++
 string Search(string KEY);
-string Search(string KEY, string DEFAULT);
 string Search(string KEY, string LANG);
-string Search(string KEY, string DEFAULT, string LANG);
+string Search(string KEY, string LANG, string DEFAULT);
 ```
 
 **Such as**
 ```C++
-I18N.Search("Hello", "Chinese");
+I18N.Search("Hello", Chinese);
 ```
 
 ### Reset
 
 ```C++
-void SetLang(string LANG);
-void SetLang(string LANG_DIRECTORY);
+void SetLang_Lang(string LANG);
+void SetLang_Dir(string LANG_DIRECTORY);
 ```
 
 **Such as**
 
 ```C++
-I18N.SetLang("Japanese");
+I18N.SetLang_Lang(Japanese);
+I18N.SetLang_Dir("LANG/");
+```
+
+### Use language file
+
+```C++
+string use(string KEY);
+string use(string KEY,string DEFAULT);
+```
+
+**Such as**
+
+```C++
+I18N.use("zh.Hello");
+I18N.use("en.Hello");
 ```
